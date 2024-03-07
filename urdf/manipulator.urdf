@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="manipulator">
+  <!-- <link name="robot_footprint"></link>
+  <joint name="robot_footprint_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<parent link="robot_footprint"/>
+		<child link="base_link" />
+	</joint> -->
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00908164115042133 0.00249999999999991 -0.0305049626836885"
+        rpy="0 0 0" />
+      <mass
+        value="0.11980315324475" />
+      <inertia
+        ixx="0.000288625897602559"
+        ixy="-1.09695631019673E-20"
+        ixz="1.5465282435664E-05"
+        iyy="0.000529409365034584"
+        iyz="-5.8120920424534E-20"
+        izz="0.000241282647237211" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/base_link.dae" />
+        <!-- <mesh filename="file://$(robot_description)/meshes/base_link.STL"/> -->
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="BaseLink">
+    <inertial>
+      <origin
+        xyz="0.0130098149098752 0.00637352183697149 0.0351023055155284"
+        rpy="0 0 0" />
+      <mass
+        value="0.635450901016514" />
+      <inertia
+        ixx="0.00146658281605414"
+        ixy="-8.00533562972478E-05"
+        ixz="-0.000156151329007892"
+        iyy="0.00107522273325424"
+        iyz="-0.000157052488147922"
+        izz="0.00140462825604696" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/BaseLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/BaseLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Base"
+    type="revolute">
+    <origin
+      xyz="0 0 0.024"
+      rpy="0 0 -0.38581" />
+    <parent
+      link="base_link" />
+    <child
+      link="BaseLink" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="+3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="-0.0171899024918185 3.96098050019222E-09 0.211814397998685"
+        rpy="0 0 0" />
+      <mass
+        value="0.75439962581054" />
+      <inertia
+        ixx="0.00666589929249409"
+        ixy="-5.52900390402011E-13"
+        ixz="0.000118152905304154"
+        iyy="0.00645035702489968"
+        iyz="-1.45236654683188E-10"
+        izz="0.000447411993441979" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Link_1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.07"
+      rpy="-0.049937 0 0" />
+    <parent
+      link="BaseLink" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.65"
+      upper="+0.40"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LInk2">
+    <inertial>
+      <origin
+        xyz="-1.15541102019279E-07 0.0622210280253098 0.000780641167662521"
+        rpy="0 0 0" />
+      <mass
+        value="0.132683268511766" />
+      <inertia
+        ixx="0.000149499984756005"
+        ixy="9.02670425663714E-10"
+        ixz="1.59136095041767E-10"
+        iyy="4.34056705353541E-05"
+        iyz="1.00196036779716E-05"
+        izz="0.000141229747624599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/LInk2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/LInk2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Link_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.041876 0 0.5"
+      rpy="0 0.86992 -1.5708" />
+    <parent
+      link="Link1" />
+    <child
+      link="LInk2" />
+    <axis
+      xyz="0 -1 0" /> 
+      <!-- changes in x -->
+    <limit
+      lower="-2.00"
+      upper="+3.78"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LInk2_roll">
+    <inertial>
+      <origin
+        xyz="0.160931421999159 0.00967850395069597 0.0167637528504534"
+        rpy="0 0 0" />
+      <mass
+        value="0.265567495853836" />
+      <inertia
+        ixx="0.000132124255543682"
+        ixy="-1.09508918218255E-05"
+        ixz="-1.89684816624954E-05"
+        iyy="0.000471604742846838"
+        iyz="1.03577523752584E-05"
+        izz="0.000483564319253852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/LInk2_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/LInk2_roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Link_2_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.068 0"
+      rpy="1.6895 -1.5708 0" />
+    <parent
+      link="LInk2" />
+    <child
+      link="LInk2_roll" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="+3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link3">
+    <inertial>
+      <origin
+        xyz="-1.11690691251276E-07 -0.00647763349746033 0.0333206221271415"
+        rpy="0 0 0" />
+      <mass
+        value="0.144270851305288" />
+      <inertia
+        ixx="0.000257274308797651"
+        ixy="-2.80207124118818E-11"
+        ixz="-1.21019066563576E-10"
+        iyy="0.00020954236699102"
+        iyz="-7.32674962057258E-05"
+        izz="8.42184579446783E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kai/meshes/Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Link_3_joint"
+    type="revolute">
+    <origin
+      xyz="0.30505 0 0"
+      rpy="-1.4084 -0.50003 -1.9" />
+    <parent
+      link="LInk2_roll" />
+    <child
+      link="Link3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="+3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
