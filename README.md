@@ -7,4 +7,4 @@
 > change the paths of the stl files in manipulator.urdf to load meshes in rviz2
 
 
-![Alt text](Screenshot from 2024-03-07 23-55-30.png)
+![Alt text](Screenshot.png)
