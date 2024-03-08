@@ -1,0 +1,31 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    vajra_hand:
+      type: position_controllers/GripperActionController
+
+
+    vajra_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+vajra_hand:
+  ros__parameters:
+    joint: Link_3_joint
+vajra_arm_controller:
+  ros__parameters:
+    joints:
+      - Base
+      - Link_1_joint
+      - Link_2_joint
+      - Link_2_roll_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
